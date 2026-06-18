@@ -11,6 +11,7 @@ body{
 
 header{
     margin:1rem 2rem;
+    padding:0 2rem;
     display:flex;
     align-items: center;
     
@@ -33,11 +34,41 @@ nav ul {
     list-style: none;
 }
 
-nav a{
+.nav-link{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:black;
+    color:#64748b;
     font-weight: 500;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+    color:black;
+    font-weight: 600;
+
+}
+
+.project-icon-badge{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius:4px;
+    border-color: #64748b;
+    background-color: white;
+}
+
+.project-icon{
+    
+    color:#64748b;
+}
+
+.project-icon:hover{
+    color:black;
+    font-weight: 600;
 }
 
 h1{
@@ -84,3 +115,19 @@ h1{
     padding:1rem;
    
 }
+
+.home-new-thought{
+    width:100%;
+    min-height: 250px;
+    margin: 2rem  0;
+    border-style: dashed;
+    border-width: 1px;
+    border-radius:8px;
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+    align-items: center;
+    justify-content: center;
+
+}
+
