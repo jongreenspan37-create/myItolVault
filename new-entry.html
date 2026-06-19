@@ -35,6 +35,86 @@
             </ul>
         </nav>
     </header>
+
+    <section class="input-container">
+        <div class="thought-column">
+            <div class="blank"></div>
+            <div class="thought-input">DEPTH INSIGHT</div>
+            <div class="thought-input">While without judgement the vellum remebers only what you choose to ink</div>
+        </div>
+        
+        <div>
+            <form id="input-form" class="input-form">
+
+                <div class="entry-title-container">
+                    <h2 id="display-date"></h2>
+                    
+                    
+                    
+                    <input id="entry-title" 
+                        name="entry-title" 
+                        class="entry-title" 
+                        type="text" 
+                        required 
+                        placeholder="Untitled Reflection">
+                </div>
+                
+                <input id="entry-date" 
+                    name="entry-date" 
+                    class="entry-date" 
+                    type="date" 
+                    required>
+                
+                
+                
+                <textarea id="entry-text" 
+                        name="entry-text" 
+                        class="entry-text"
+                        required 
+                        placeholder="Begin your reflection..."></textarea>
+
+                <div style="align-self: flex-end;">
+                    <button type="button" class="btn-1">Discard</button>
+                    <button type="submit" class="btn">Save Entry</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            
+            document.addEventListener('DOMContentLoaded',()=>{
+                
+                const today = new Date();
+
+                //Crete formatted date
+                const formattedDate = new Intl.DateTimeFormat('en-US', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                const standardDateFormat = formattedDate.format(today);
+                const cleanDateFormat = standardDateFormat.replace(/,/g, '');
+  
+
+                const displayDate = document.getElementById('display-date');
+                displayDate.textContent = cleanDateFormat; 
+                
+                //add date to save
+                console.log(today);
+
+                const entryDate = document.getElementById('entry-date');
+                const storedDate = new Date().toLocaleDateString('en-CA');
+                console.log(storedDate)
+                entryDate.value = storedDate;
+                
+            });
+            
+
+            </script>
+
+    </section>
     
 </body>
 </html>

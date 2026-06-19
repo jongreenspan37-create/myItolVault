@@ -1,3 +1,4 @@
+/*GLOBAL*/
 *{
     margin:0;
     padding:0;
@@ -9,6 +10,7 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/*HEADER AND NAVIGATION*/
 header{
     margin:1rem 2rem;
     padding:0 2rem;
@@ -78,6 +80,8 @@ h1{
     font-size:x-large;
 }
 
+/*INDEX PAGE*/
+
 .thoughts-container{
     margin:2rem auto;
     max-width:1200px;
@@ -87,8 +91,6 @@ h1{
     display:grid;
     grid-auto-rows: minmax(250px, auto);
     margin:2rem 0;
-    
-
     
 }
 
@@ -131,3 +133,80 @@ h1{
 
 }
 
+/*INPUT FORM*/
+
+.input-container{
+    display:flex;
+    margin:auto;
+    max-width:2000px;
+
+}
+
+.thought-column{
+    max-width: 250px;
+}
+
+.blank{
+    height:160px;
+    
+}
+
+.thought-input{
+    text-align:right;
+    color:#cbd5e1;
+    padding:0 1rem;
+    font-size: small;
+    margin-top: 1rem;
+}
+.input-form{
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+}
+
+.entry-title-container{
+    
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: #64748b;
+    
+}
+
+h2{
+    color:#64748b;
+    font-weight: 500;
+    padding:0.25rem 0.5rem;
+}
+
+.entry-title{
+    color:#64748b;
+    font-size: 48px;
+    border-style: none;
+    background-color: none;
+    margin-top: 8px;
+    padding:0.25rem 0.5rem;
+}
+
+.entry-text{
+    width:100%;
+    min-height:350px;
+    font-size: large;
+    padding:0.25rem;
+    border-radius: 8px;
+}
+
+.btn{
+    width:120px;
+    height:30px;
+    color:#64748b;
+    background-color: black;
+    cursor:pointer;
+    border-radius: 8px;
+
+}
+
+.btn-1{
+    color:#64748b;
+    border:none;
+    cursor:pointer;
+}
