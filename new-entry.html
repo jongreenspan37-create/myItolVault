@@ -58,6 +58,9 @@
                         required 
                         placeholder="Untitled Reflection">
                 </div>
+                <div class="entry-tag-btn-container">
+                    <button type="button" id="entry-tag-btn" class="entry-tag-btn">New Tag</button><span><button type="button" class="entry-tag-delete">x</button></span>
+                </div>
                 
                 <input id="entry-date" 
                     name="entry-date" 
@@ -73,48 +76,32 @@
                         required 
                         placeholder="Begin your reflection..."></textarea>
 
-                <div style="align-self: flex-end;">
+                <div class="btn-container">
                     <button type="button" class="btn-1">Discard</button>
                     <button type="submit" class="btn">Save Entry</button>
                 </div>
             </form>
         </div>
 
-        <script>
-            
-            document.addEventListener('DOMContentLoaded',()=>{
-                
-                const today = new Date();
+        
 
-                //Crete formatted date
-                const formattedDate = new Intl.DateTimeFormat('en-US', {
-                    weekday: 'long',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-
-                const standardDateFormat = formattedDate.format(today);
-                const cleanDateFormat = standardDateFormat.replace(/,/g, '');
-  
-
-                const displayDate = document.getElementById('display-date');
-                displayDate.textContent = cleanDateFormat; 
-                
-                //add date to save
-                console.log(today);
-
-                const entryDate = document.getElementById('entry-date');
-                const storedDate = new Date().toLocaleDateString('en-CA');
-                console.log(storedDate)
-                entryDate.value = storedDate;
-                
-            });
-            
-
-            </script>
+        
 
     </section>
+
+    <dialog id="mood-dialog">
+            <h3>Select a Mood:</h3>
+            <button type="button" class="entry-tag-btn-container" data-mood="Happy">Happy 😊</button>
+            <button type="button" class="mood-option" data-mood="Sad">Sad 😢</button>
+            <button type="button" class="mood-option" data-mood="Anxious">Anxious 😰</button>
+            <br><br>
+            <button type="button" id="close-dialog">Cancel</button>
+    </dialog>
+
+     <footer>
+        <div>&copy; 2026 My ITOL Vault. Designed for reflection </div>
+    </footer>
+    <script src="./app.js"></script>
     
 </body>
 </html>
