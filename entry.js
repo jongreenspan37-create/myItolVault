@@ -9,6 +9,7 @@ const moodContainer = document.querySelector('.mood-container');
 const displayMoods =document.getElementById('display-moods');
 const moodDelete = document.querySelectorAll('.mood-delete');
 const inputForm = document.getElementById('input-form');
+const discardThought = document.getElementById('discard-thought');
 
 let newEntryMoods = [];
 
@@ -130,5 +131,9 @@ inputForm?.addEventListener('submit', (e)=>{
     
 
 });
+
+discardThought.addEventListener('click',()=>{
+    clearAndCloseForm();
+})
 
 

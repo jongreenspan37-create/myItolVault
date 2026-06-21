@@ -325,6 +325,14 @@ h2{
     z-index: 9999;
 }
 
+.mood-option{
+    padding:0.25rem 0.75rem;
+    background-color: #64748b;
+    border-radius: 4px;
+    color:white;
+    cursor:pointer;
+}
+
 /*ARCHIVE PAGE*/
 
 .archive-container{
