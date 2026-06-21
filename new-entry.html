@@ -48,9 +48,7 @@
 
                 <div class="entry-title-container">
                     <h2 id="display-date"></h2>
-                    
-                    
-                    
+                                       
                     <input id="entry-title" 
                         name="entry-title" 
                         class="entry-title" 
@@ -58,8 +56,16 @@
                         required 
                         placeholder="Untitled Reflection">
                 </div>
-                <div class="entry-tag-btn-container">
-                    <button type="button" id="entry-tag-btn" class="entry-tag-btn">New Tag</button><span><button type="button" class="entry-tag-delete">x</button></span>
+
+                <div class="mood-container">
+                    <button type="button" 
+                            id="entry-tag-btn" 
+                            class="btn">
+                            Add Mood
+                    </button>
+
+                    <!--Dynamic moods created here-->
+
                 </div>
                 
                 <input id="entry-date" 
@@ -80,28 +86,27 @@
                     <button type="button" class="btn-1">Discard</button>
                     <button type="submit" class="btn">Save Entry</button>
                 </div>
+
             </form>
         </div>
-
-        
-
-        
 
     </section>
 
     <dialog id="mood-dialog">
             <h3>Select a Mood:</h3>
-            <button type="button" class="entry-tag-btn-container" data-mood="Happy">Happy 😊</button>
+            <button type="button" class="mood-option" data-mood="Happy">Happy 😊</button>
             <button type="button" class="mood-option" data-mood="Sad">Sad 😢</button>
             <button type="button" class="mood-option" data-mood="Anxious">Anxious 😰</button>
             <br><br>
-            <button type="button" id="close-dialog">Cancel</button>
+            <button type="button" id="close-dialog">Close</button>
     </dialog>
 
      <footer>
         <div>&copy; 2026 My ITOL Vault. Designed for reflection </div>
     </footer>
     <script src="./app.js"></script>
+    <script src="entry.js"></script>
+    
     
 </body>
 </html>
