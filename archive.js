@@ -1,5 +1,5 @@
 
-
+//DYNAMICALLT DISPLAY ALL ENTRIES
 const displayThoughts = document.getElementById('display-thoughts');
 
 function addCard(title,date,text,moodsArray) {

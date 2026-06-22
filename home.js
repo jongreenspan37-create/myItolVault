@@ -1,6 +1,4 @@
-
-
-
+//GET EACH LINES ENTRIES
 const lineOneEntries = savedEntries.slice(-2);
 const lineTwoEntries = savedEntries.slice(-4,-2);
 const lineThreeEntries = savedEntries.slice(-5,-4)
@@ -9,6 +7,7 @@ const lineOne =document.querySelector('.line-one');
 const lineTwo = document.querySelector('.line-two');
 const lineThree = document.querySelector('.line-three');
 
+//ADD THE CARD INFO
 function addCard(title,date,text,moodsArray) {
 
 
@@ -23,6 +22,7 @@ function addCard(title,date,text,moodsArray) {
     return newCard;
 }
 
+//CREATE THE GRID ITEMS AND FILL EACH LINE
 function createHomeThoughts(){
     
     if (lineOne && lineOneEntries.length > 0) {

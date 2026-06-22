@@ -1,4 +1,4 @@
-//GLOBAL VARIABLES
+//ENTRY VARIABLES
 
 const addTagBtn = document.getElementById('entry-tag-btn');
 const moodDialog = document.getElementById('mood-dialog');
@@ -11,12 +11,14 @@ const moodDelete = document.querySelectorAll('.mood-delete');
 const inputForm = document.getElementById('input-form');
 const discardThought = document.getElementById('discard-thought');
 
+//TEMP ARRAY FOR MOODS
 let newEntryMoods = [];
 
 
 
 //FUNCTIONS
 
+//CLEAR FORM AND MOODS ARRAY
 function clearAndCloseForm() {
    
     inputForm.reset();
@@ -93,6 +95,7 @@ moodDialog?.addEventListener('click', (event) => {
     moodDialog.close();
 }); 
 
+//DELETE A MOOD
 moodContainer?.addEventListener ('click', (event)=> {
     const deleteButton = event.target.closest('.mood-delete')
     if(!deleteButton) return;
@@ -109,6 +112,7 @@ moodContainer?.addEventListener ('click', (event)=> {
 
 });
 
+//SAVE ENTRY AND ADD TO ARRAY
 inputForm?.addEventListener('submit', (e)=>{
     e.preventDefault();
 
@@ -132,6 +136,7 @@ inputForm?.addEventListener('submit', (e)=>{
 
 });
 
+//DICARD ENTRY NO SAVE
 discardThought.addEventListener('click',()=>{
     clearAndCloseForm();
 })

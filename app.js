@@ -1,5 +1,7 @@
+//LOAD LOCAL STORAGE FOR ALL PAGES
 let savedEntries = JSON.parse(localStorage.getItem('journalEntries')) || [];
 
+//VISUAL DATE FORMAT
 function getCleanDate(dateObject){
     
 
@@ -16,6 +18,7 @@ function getCleanDate(dateObject){
     return cleanDateFormat
 }
 
+//CARD TEMPLATE
 function getNewCard(title, text, tagsHTML, dateObject){
     return       `<div class="thought-card">
                      <div class="tag-container">
